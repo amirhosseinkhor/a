@@ -1,0 +1,26 @@
+
+#include <iostream>
+using namespace std;
+
+class PersonalInfo {
+    private:
+        string names[10] = {"amir", "ali", "hossein", "matin", "parham", "mostafa", "Sara", "Asghar", "noori", "hashem"};
+        int ages[10] = {15, 29, 49, 68, 39, 7, 9, 33, 16, 31};
+
+    public:
+        double Average() {
+            int sum = 0;    // Initialize sum to 0
+            for (int counter = 0; counter < 10; counter++) {
+                sum += ages[counter];
+            }
+            double avg = (double) sum / 10; // Calculate the average
+            return avg;
+        }
+};
+
+int main() {
+    PersonalInfo p1;
+    double avg = p1.Average();
+    cout << "The average of the ages is: " << avg << endl;
+    return 0;
+}
